@@ -1,13 +1,16 @@
-#!/usr/bin/env ec-perl
+#!/usr/bin/env cb-perl
 
 use ElectricCommander;
 use File::Basename;
 
 my $eccommands;
 
+#$eccommands = ($^O eq "MSWin32") ?
+#    "c:/Program Files/Electric Cloud/ElectricCommander/src/eccommands.pl" :
+#    "/opt/electriccloud/electriccommander/src/eccommands.pl";
 $eccommands = ($^O eq "MSWin32") ?
-    "c:/Program Files/Electric Cloud/ElectricCommander/src/eccommands.pl" :
-    "/opt/electriccloud/electriccommander/src/eccommands.pl";
+    "c:/Program Files/CloudBees/Software Delivery Automation/src/eccommands.pl" :
+    "/opt/cloudbees/sda/src/eccommands.pl";
 
 require $eccommands;
 
