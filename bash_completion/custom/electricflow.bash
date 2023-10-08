@@ -396,4 +396,5 @@ __electricflow(){
 
 }
 
-complete -o default -D -F __electricflow
+# Install the default completion (-D option) only if it is supported. This requires bash v4.2+.
+complete -p -D >/dev/null 2>&1 && complete -o default -D -F __electricflow || true
